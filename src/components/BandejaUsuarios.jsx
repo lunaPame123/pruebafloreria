@@ -11,7 +11,7 @@ const BandejaUsuarios = () => {
     useEffect(() => {
     setUsuarios(usuariosSimulados);
     }, [])};
-    
+
  <div style={{ padding: "20px" }}>
   <h2>Bandeja de Usuarios</h2>
   <table border="1" cellPadding="10">
@@ -23,7 +23,16 @@ const BandejaUsuarios = () => {
         <th>Rol</th>
       </tr>
     </thead>
-    <tbody></tbody>
+    <tbody>
+        {usuarios.map((user) => (
+            <tr key={user.id}>
+                <td>{user.id}</td>
+                <td>{user.nombre}</td>
+                <td>{user.email}</td>
+                <td>{user.rol}</td>
+            </tr>
+        ))}
+    </tbody>
   </table>
 </div>
 ;
