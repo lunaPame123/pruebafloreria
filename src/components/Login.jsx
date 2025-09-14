@@ -14,7 +14,7 @@ const Login = () => {
  };
 <div style={{ maxWidth: "400px", margin: "auto", paddingTop: "50px" }}>
   <h2>Iniciar Sesión</h2>
-  <form>
+  <form onSubmit={handleSubmit}>
     <div>
       <label>Email:</label>
       <input type="email"
